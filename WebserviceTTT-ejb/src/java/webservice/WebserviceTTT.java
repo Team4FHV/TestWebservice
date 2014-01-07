@@ -5,6 +5,7 @@
  */
 package webservice;
 
+import controller.CorbaController;
 import java.util.ArrayList;
 import java.util.List;
 import javax.jws.WebService;
@@ -19,6 +20,13 @@ import webserviceDTO.*;
 @WebService(name = "TTTwebservice")
 @Stateless
 public class WebserviceTTT {
+    private CorbaController _corbaCtrl;
+    
+    public WebserviceTTT()
+    {
+        _corbaCtrl = new CorbaController();
+    }
+    
 
     /**
      * Web service operation
@@ -85,5 +93,6 @@ public class WebserviceTTT {
         //TODO write your implementation code here:
         return null;
     }
+    
 
 }
